@@ -6,17 +6,13 @@ namespace OptionNull
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var test = new User(1, None.Value);
-            
-            Console.WriteLine(test.ToString());
-            
-            var test2 = new User(2, new PersonalInfo("Adres"));
-            
-            Console.WriteLine(test2.ToString());
+            var user1 = new User(1, None.Value);
 
+            Console.WriteLine(user1.ToString());
 
+            var user2 = new User(2, new PersonalInfo("Adres"));
+
+            Console.WriteLine(user2.ToString());
         }
     }
- 
 }
