@@ -2,16 +2,11 @@
 {
     public class PersonalInfo
     {
-        public string Address { get; set; }
+        public string Address { get;}
 
         public PersonalInfo(string info)
         {
             Address = info;
-        }
-
-        public override string ToString()
-        {
-            return Address;
         }
     }
 }

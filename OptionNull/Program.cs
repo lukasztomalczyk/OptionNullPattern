@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.PortableExecutable;
 
 namespace OptionNull
 {
@@ -6,13 +7,13 @@ namespace OptionNull
     {
         static void Main(string[] args)
         {
-            var user1 = new User(1, None.Value);
+            var user1 = new User("Lukasz", None.Value);
+            var user2 = new User("Kate", new PersonalInfo("221 B Baker St, London, England"));
 
-            Console.WriteLine(user1.ToString());
+            Console.WriteLine("User: {1}, address is: {0}", user1.Info.Reduce(new PersonalInfo("default")).Address, user1.Name);
 
-            var user2 = new User(2, new PersonalInfo("Adres"));
-
-            Console.WriteLine(user2.ToString());
+            
+            Console.WriteLine("User: {1}, address is: {0}", user1.Info.Reduce(new PersonalInfo("default")).Address, user2.Name);
         }
     }
 }

@@ -4,20 +4,14 @@ namespace OptionNull
 {
     public class User
     {
-        public int Id { get; set; }
+        public string Name{ get; }
         
-        public Option<PersonalInfo> Info { get; set; }
+        public Option<PersonalInfo> Info { get; }
 
-        public override string ToString()
-        {
-            var test = Info.Reduce(new PersonalInfo("default"));
-            
-            return $"ID: {Id}, personal info: {Info.Reduce(new PersonalInfo("default"))}";
-        }
 
-        public User(int id, Option<PersonalInfo> info)
+        public User(string name, Option<PersonalInfo> info)
         {
-            Id = id;
+            Name = name;
             Info = info;
         }
     }
