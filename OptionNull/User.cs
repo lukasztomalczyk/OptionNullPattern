@@ -4,7 +4,7 @@ namespace OptionNull
 {
     public class User
     {
-        public string Name{ get; }
+        public string Name { get; }
         
         public Option<PersonalInfo> Info { get; }
 

@@ -13,7 +13,7 @@ namespace OptionNull
             Console.WriteLine("User: {1}, address is: {0}", user1.Info.Reduce(new PersonalInfo("default")).Address, user1.Name);
 
             
-            Console.WriteLine("User: {1}, address is: {0}", user1.Info.Reduce(new PersonalInfo("default")).Address, user2.Name);
+            Console.WriteLine("User: {1}, address is: {0}", user2.Info.Reduce(new PersonalInfo("default")).Address, user2.Name);
         }
     }
 }
